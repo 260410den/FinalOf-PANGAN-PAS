@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/harga.js": {
+      "maxDuration": 60
+    },
+    "api/akun.js": {
+      "maxDuration": 20
+    },
+    "api/daerah.js": {
+      "maxDuration": 60
+    },
+    "api/ai.js": {
+      "maxDuration": 120
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/akun/:ep",
+      "destination": "/api/akun?ep=:ep"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

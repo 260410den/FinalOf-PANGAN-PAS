@@ -1,0 +1,1308 @@
+{
+ "source": "PIHPS Nasional – Bank Indonesia (daftar kota pantauan); koordinat perkiraan pusat kota © OpenStreetMap contributors",
+ "generatedAt": "2026-11-10T13:19:21.941Z",
+ "regencies": [
+  {
+   "id": 1,
+   "name": "Kota Banda Aceh",
+   "provinceId": 1,
+   "province": "Aceh",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 5.5528,
+   "lon": 95.3193
+  },
+  {
+   "id": 2,
+   "name": "Kota Lhokseumawe",
+   "provinceId": 1,
+   "province": "Aceh",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 5.179,
+   "lon": 97.1481
+  },
+  {
+   "id": 3,
+   "name": "Kota Meulaboh",
+   "provinceId": 1,
+   "province": "Aceh",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 4.1437,
+   "lon": 96.1274
+  },
+  {
+   "id": 319,
+   "name": "Kab. Badung",
+   "provinceId": 17,
+   "province": "Bali",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.5446,
+   "lon": 115.1985
+  },
+  {
+   "id": 315,
+   "name": "Kab. Tabanan",
+   "provinceId": 17,
+   "province": "Bali",
+   "types": [
+    1
+   ],
+   "lat": -8.4403,
+   "lon": 115.0716
+  },
+  {
+   "id": 50,
+   "name": "Kota Denpasar",
+   "provinceId": 17,
+   "province": "Bali",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.6653,
+   "lon": 115.2176
+  },
+  {
+   "id": 51,
+   "name": "Kota Singaraja",
+   "provinceId": 17,
+   "province": "Bali",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.1256,
+   "lon": 115.1013
+  },
+  {
+   "id": 25,
+   "name": "Kota Cilegon",
+   "provinceId": 11,
+   "province": "Banten",
+   "types": [
+    1
+   ],
+   "lat": -6.0174,
+   "lon": 106.0538
+  },
+  {
+   "id": 24,
+   "name": "Kota Serang",
+   "provinceId": 11,
+   "province": "Banten",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.117,
+   "lon": 106.1518
+  },
+  {
+   "id": 26,
+   "name": "Kota Tangerang",
+   "provinceId": 11,
+   "province": "Banten",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.1762,
+   "lon": 106.6382
+  },
+  {
+   "id": 17,
+   "name": "Kota Bengkulu",
+   "provinceId": 7,
+   "province": "Bengkulu",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -3.7923,
+   "lon": 102.2624
+  },
+  {
+   "id": 41,
+   "name": "Kota Yogyakarta",
+   "provinceId": 15,
+   "province": "DI Yogyakarta",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.8013,
+   "lon": 110.3647
+  },
+  {
+   "id": 34,
+   "name": "Kota Jakarta Pusat",
+   "provinceId": 13,
+   "province": "DKI Jakarta",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.1823,
+   "lon": 106.8429
+  },
+  {
+   "id": 245,
+   "name": "Kab. Gorontalo",
+   "provinceId": 25,
+   "province": "Gorontalo",
+   "types": [
+    1
+   ],
+   "lat": 0.7012,
+   "lon": 122.7233
+  },
+  {
+   "id": 66,
+   "name": "Kota Gorontalo",
+   "provinceId": 25,
+   "province": "Gorontalo",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 0.5384,
+   "lon": 123.0595
+  },
+  {
+   "id": 16,
+   "name": "Kab. Bungo",
+   "provinceId": 6,
+   "province": "Jambi",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -1.5161,
+   "lon": 101.9848
+  },
+  {
+   "id": 15,
+   "name": "Kota Jambi",
+   "provinceId": 6,
+   "province": "Jambi",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -1.6297,
+   "lon": 103.6078
+  },
+  {
+   "id": 103,
+   "name": "Kab. Cirebon",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1
+   ],
+   "lat": -6.7612,
+   "lon": 108.4564
+  },
+  {
+   "id": 106,
+   "name": "Kab. Tasikmalaya",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1
+   ],
+   "lat": -7.4272,
+   "lon": 108.0684
+  },
+  {
+   "id": 27,
+   "name": "Kota Bandung",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.9218,
+   "lon": 107.6071
+  },
+  {
+   "id": 30,
+   "name": "Kota Bekasi",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.235,
+   "lon": 106.9945
+  },
+  {
+   "id": 31,
+   "name": "Kota Bogor",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.5964,
+   "lon": 106.7973
+  },
+  {
+   "id": 28,
+   "name": "Kota Cirebon",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.7137,
+   "lon": 108.5608
+  },
+  {
+   "id": 32,
+   "name": "Kota Depok",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.4072,
+   "lon": 106.8158
+  },
+  {
+   "id": 33,
+   "name": "Kota Sukabumi",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.9213,
+   "lon": 106.927,
+   "manual": true
+  },
+  {
+   "id": 29,
+   "name": "Kota Tasikmalaya",
+   "provinceId": 12,
+   "province": "Jawa Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.3262,
+   "lon": 108.2201
+  },
+  {
+   "id": 38,
+   "name": "Kab. Banyumas",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.4551,
+   "lon": 109.1167
+  },
+  {
+   "id": 166,
+   "name": "Kab. Boyolali",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -7.3872,
+   "lon": 110.7039
+  },
+  {
+   "id": 39,
+   "name": "Kab. Cilacap",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.4617,
+   "lon": 108.8046
+  },
+  {
+   "id": 158,
+   "name": "Kab. Karanganyar",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -7.6197,
+   "lon": 111.0698
+  },
+  {
+   "id": 159,
+   "name": "Kab. Klaten",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -7.6732,
+   "lon": 110.6285
+  },
+  {
+   "id": 40,
+   "name": "Kab. Kudus",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -6.7978,
+   "lon": 110.8679
+  },
+  {
+   "id": 151,
+   "name": "Kab. Sragen",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -7.3925,
+   "lon": 110.953
+  },
+  {
+   "id": 144,
+   "name": "Kab. Sukoharjo",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -7.6815,
+   "lon": 110.87
+  },
+  {
+   "id": 165,
+   "name": "Kab. Wonogiri",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1
+   ],
+   "lat": -7.9621,
+   "lon": 110.9576
+  },
+  {
+   "id": 35,
+   "name": "Kota Semarang",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.9904,
+   "lon": 110.4229
+  },
+  {
+   "id": 787,
+   "name": "Kota Surakarta",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    2
+   ],
+   "lat": -7.5692,
+   "lon": 110.8284
+  },
+  {
+   "id": 36,
+   "name": "Kota Surakarta (Solo)",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.5692,
+   "lon": 110.8284
+  },
+  {
+   "id": 37,
+   "name": "Kota Tegal",
+   "provinceId": 14,
+   "province": "Jawa Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -6.8674,
+   "lon": 109.1378
+  },
+  {
+   "id": 46,
+   "name": "Kab. Banyuwangi",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.3326,
+   "lon": 114.1416
+  },
+  {
+   "id": 45,
+   "name": "Kab. Jember",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.2633,
+   "lon": 113.6279
+  },
+  {
+   "id": 49,
+   "name": "Kab. Sumenep",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1
+   ],
+   "lat": -6.9992,
+   "lon": 113.8377
+  },
+  {
+   "id": 135,
+   "name": "Kota Blitar",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.0982,
+   "lon": 112.1651
+  },
+  {
+   "id": 44,
+   "name": "Kota Kediri",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.8111,
+   "lon": 112.0046
+  },
+  {
+   "id": 47,
+   "name": "Kota Madiun",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.6291,
+   "lon": 111.5169
+  },
+  {
+   "id": 43,
+   "name": "Kota Malang",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.9771,
+   "lon": 112.634
+  },
+  {
+   "id": 48,
+   "name": "Kota Probolinggo",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.7441,
+   "lon": 113.2158
+  },
+  {
+   "id": 42,
+   "name": "Kota Surabaya",
+   "provinceId": 16,
+   "province": "Jawa Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -7.2463,
+   "lon": 112.7378
+  },
+  {
+   "id": 784,
+   "name": "Kab. Sintang",
+   "provinceId": 20,
+   "province": "Kalimantan Barat",
+   "types": [
+    1
+   ],
+   "lat": 0.0636,
+   "lon": 111.4866
+  },
+  {
+   "id": 57,
+   "name": "Kota Pontianak",
+   "provinceId": 20,
+   "province": "Kalimantan Barat",
+   "types": [
+    1
+   ],
+   "lat": -0.0227,
+   "lon": 109.3447
+  },
+  {
+   "id": 58,
+   "name": "Kota Singkawang",
+   "provinceId": 20,
+   "province": "Kalimantan Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 0.907,
+   "lon": 108.989
+  },
+  {
+   "id": 782,
+   "name": "Kab. Kotabaru",
+   "provinceId": 21,
+   "province": "Kalimantan Selatan",
+   "types": [
+    1
+   ],
+   "lat": -2.7951,
+   "lon": 115.9713
+  },
+  {
+   "id": 59,
+   "name": "Kota Banjarmasin",
+   "provinceId": 21,
+   "province": "Kalimantan Selatan",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -3.3187,
+   "lon": 114.5926
+  },
+  {
+   "id": 60,
+   "name": "Kota Tanjung",
+   "provinceId": 21,
+   "province": "Kalimantan Selatan",
+   "types": [
+    1
+   ],
+   "lat": -2.1653,
+   "lon": 115.3831
+  },
+  {
+   "id": 61,
+   "name": "Kota Palangkaraya",
+   "provinceId": 22,
+   "province": "Kalimantan Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -2.2073,
+   "lon": 113.9164
+  },
+  {
+   "id": 62,
+   "name": "Kota Sampit",
+   "provinceId": 22,
+   "province": "Kalimantan Tengah",
+   "types": [
+    1
+   ],
+   "lat": -2.5389,
+   "lon": 112.9494
+  },
+  {
+   "id": 64,
+   "name": "Kota Balikpapan",
+   "provinceId": 23,
+   "province": "Kalimantan Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -1.2399,
+   "lon": 116.8593
+  },
+  {
+   "id": 346,
+   "name": "Kota Bontang",
+   "provinceId": 23,
+   "province": "Kalimantan Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 0.1237,
+   "lon": 117.4717
+  },
+  {
+   "id": 63,
+   "name": "Kota Samarinda",
+   "provinceId": 23,
+   "province": "Kalimantan Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.5018,
+   "lon": 117.1393
+  },
+  {
+   "id": 340,
+   "name": "Kab. Bulungan",
+   "provinceId": 24,
+   "province": "Kalimantan Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 2.762,
+   "lon": 117.0743
+  },
+  {
+   "id": 348,
+   "name": "Kab. Nunukan",
+   "provinceId": 24,
+   "province": "Kalimantan Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 3.9075,
+   "lon": 117.0424
+  },
+  {
+   "id": 65,
+   "name": "Kota Tarakan",
+   "provinceId": 24,
+   "province": "Kalimantan Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 3.3,
+   "lon": 117.633
+  },
+  {
+   "id": 20,
+   "name": "Kota Pangkal Pinang",
+   "provinceId": 9,
+   "province": "Kepulauan Bangka Belitung",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -2.1207,
+   "lon": 106.1135
+  },
+  {
+   "id": 21,
+   "name": "Kota Tanjung Pandan",
+   "provinceId": 9,
+   "province": "Kepulauan Bangka Belitung",
+   "types": [
+    1
+   ],
+   "lat": -2.7423,
+   "lon": 107.6545
+  },
+  {
+   "id": 13,
+   "name": "Kota Batam",
+   "provinceId": 5,
+   "province": "Kepulauan Riau",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 1.1031,
+   "lon": 104.0384
+  },
+  {
+   "id": 14,
+   "name": "Kota Tanjung Pinang",
+   "provinceId": 5,
+   "province": "Kepulauan Riau",
+   "types": [
+    1
+   ],
+   "lat": 0.9237,
+   "lon": 104.4461
+  },
+  {
+   "id": 22,
+   "name": "Kota Bandar Lampung",
+   "provinceId": 10,
+   "province": "Lampung",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -5.4294,
+   "lon": 105.2626
+  },
+  {
+   "id": 23,
+   "name": "Kota Metro",
+   "provinceId": 10,
+   "province": "Lampung",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -5.1147,
+   "lon": 105.3082
+  },
+  {
+   "id": 77,
+   "name": "Kota Ambon",
+   "provinceId": 31,
+   "province": "Maluku",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -3.6959,
+   "lon": 128.1788
+  },
+  {
+   "id": 78,
+   "name": "Kota Tual",
+   "provinceId": 31,
+   "province": "Maluku",
+   "types": [
+    1
+   ],
+   "lat": -5.5411,
+   "lon": 132.7188
+  },
+  {
+   "id": 79,
+   "name": "Kota Ternate",
+   "provinceId": 32,
+   "province": "Maluku Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 0.7852,
+   "lon": 127.3832
+  },
+  {
+   "id": 496,
+   "name": "Kab. Lombok Timur",
+   "provinceId": 18,
+   "province": "Nusa Tenggara Barat",
+   "types": [
+    1
+   ],
+   "lat": -8.6331,
+   "lon": 116.5588
+  },
+  {
+   "id": 497,
+   "name": "Kab. Sumbawa",
+   "provinceId": 18,
+   "province": "Nusa Tenggara Barat",
+   "types": [
+    1
+   ],
+   "lat": -8.7341,
+   "lon": 117.496
+  },
+  {
+   "id": 54,
+   "name": "Kota Bima",
+   "provinceId": 18,
+   "province": "Nusa Tenggara Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.5648,
+   "lon": 118.7625
+  },
+  {
+   "id": 52,
+   "name": "Kota Mataram",
+   "provinceId": 18,
+   "province": "Nusa Tenggara Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.5838,
+   "lon": 116.1068
+  },
+  {
+   "id": 304,
+   "name": "Kab. Sumba Timur",
+   "provinceId": 19,
+   "province": "Nusa Tenggara Timur",
+   "types": [
+    1
+   ],
+   "lat": -9.8343,
+   "lon": 120.2094
+  },
+  {
+   "id": 55,
+   "name": "Kota Kupang",
+   "provinceId": 19,
+   "province": "Nusa Tenggara Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -10.1632,
+   "lon": 123.6018
+  },
+  {
+   "id": 56,
+   "name": "Kota Maumere",
+   "provinceId": 19,
+   "province": "Nusa Tenggara Timur",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.6255,
+   "lon": 122.2205
+  },
+  {
+   "id": 219,
+   "name": "Kab. Jayawijaya",
+   "provinceId": 33,
+   "province": "Papua",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -4.1153,
+   "lon": 138.965
+  },
+  {
+   "id": 81,
+   "name": "Kab. Merauke",
+   "provinceId": 33,
+   "province": "Papua",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -8.4903,
+   "lon": 140.3956
+  },
+  {
+   "id": 200,
+   "name": "Kab. Mimika",
+   "provinceId": 33,
+   "province": "Papua",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -4.5875,
+   "lon": 136.9478
+  },
+  {
+   "id": 205,
+   "name": "Kab. Nabire",
+   "provinceId": 33,
+   "province": "Papua",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -3.3468,
+   "lon": 135.9503
+  },
+  {
+   "id": 80,
+   "name": "Kota Jayapura",
+   "provinceId": 33,
+   "province": "Papua",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -2.5388,
+   "lon": 140.7037
+  },
+  {
+   "id": 82,
+   "name": "Kab. Manokwari",
+   "provinceId": 34,
+   "province": "Papua Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.9777,
+   "lon": 133.7538
+  },
+  {
+   "id": 83,
+   "name": "Kota Sorong",
+   "provinceId": 34,
+   "province": "Papua Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.8634,
+   "lon": 131.2545
+  },
+  {
+   "id": 11,
+   "name": "Kota Dumai",
+   "provinceId": 4,
+   "province": "Riau",
+   "types": [
+    1
+   ],
+   "lat": 1.6632,
+   "lon": 101.447
+  },
+  {
+   "id": 10,
+   "name": "Kota Pekanbaru",
+   "provinceId": 4,
+   "province": "Riau",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 0.5262,
+   "lon": 101.4516
+  },
+  {
+   "id": 12,
+   "name": "Kota Tembilahan",
+   "provinceId": 4,
+   "province": "Riau",
+   "types": [
+    1
+   ],
+   "lat": -0.3214,
+   "lon": 103.1617
+  },
+  {
+   "id": 499,
+   "name": "Kab. Majene",
+   "provinceId": 30,
+   "province": "Sulawesi Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -3.243,
+   "lon": 118.8733
+  },
+  {
+   "id": 498,
+   "name": "Kab. Polewali Mandar",
+   "provinceId": 30,
+   "province": "Sulawesi Barat",
+   "types": [
+    1
+   ],
+   "lat": -3.3032,
+   "lon": 119.1451
+  },
+  {
+   "id": 76,
+   "name": "Kota Mamuju",
+   "provinceId": 30,
+   "province": "Sulawesi Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -2.6749,
+   "lon": 118.8885,
+   "manual": true
+  },
+  {
+   "id": 68,
+   "name": "Kab. Bulukumba",
+   "provinceId": 26,
+   "province": "Sulawesi Selatan",
+   "types": [
+    1
+   ],
+   "lat": -5.5592,
+   "lon": 120.1929
+  },
+  {
+   "id": 67,
+   "name": "Kota Makassar",
+   "provinceId": 26,
+   "province": "Sulawesi Selatan",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -5.1343,
+   "lon": 119.4124
+  },
+  {
+   "id": 69,
+   "name": "Kota Palopo",
+   "provinceId": 26,
+   "province": "Sulawesi Selatan",
+   "types": [
+    1
+   ],
+   "lat": -2.9996,
+   "lon": 120.1921
+  },
+  {
+   "id": 70,
+   "name": "Kota Parepare",
+   "provinceId": 26,
+   "province": "Sulawesi Selatan",
+   "types": [
+    1
+   ],
+   "lat": -4.0057,
+   "lon": 119.6236
+  },
+  {
+   "id": 71,
+   "name": "Kota Watampone",
+   "provinceId": 26,
+   "province": "Sulawesi Selatan",
+   "types": [
+    1
+   ],
+   "lat": -4.5421,
+   "lon": 120.3022
+  },
+  {
+   "id": 285,
+   "name": "Kab. Banggai",
+   "provinceId": 28,
+   "province": "Sulawesi Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.921,
+   "lon": 122.6975
+  },
+  {
+   "id": 74,
+   "name": "Kota Palu",
+   "provinceId": 28,
+   "province": "Sulawesi Tengah",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.9052,
+   "lon": 119.8722
+  },
+  {
+   "id": 73,
+   "name": "Kota Bau-Bau",
+   "provinceId": 27,
+   "province": "Sulawesi Tenggara",
+   "types": [
+    1
+   ],
+   "lat": -5.462,
+   "lon": 122.6058
+  },
+  {
+   "id": 72,
+   "name": "Kota Kendari",
+   "provinceId": 27,
+   "province": "Sulawesi Tenggara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -3.9918,
+   "lon": 122.518
+  },
+  {
+   "id": 249,
+   "name": "Kota Kotamobagu",
+   "provinceId": 29,
+   "province": "Sulawesi Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 0.7352,
+   "lon": 124.3154
+  },
+  {
+   "id": 75,
+   "name": "Kota Manado",
+   "provinceId": 29,
+   "province": "Sulawesi Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 1.49,
+   "lon": 124.8408
+  },
+  {
+   "id": 9,
+   "name": "Kota Bukittinggi",
+   "provinceId": 3,
+   "province": "Sumatera Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.3052,
+   "lon": 100.3695
+  },
+  {
+   "id": 8,
+   "name": "Kota Padang",
+   "provinceId": 3,
+   "province": "Sumatera Barat",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -0.9248,
+   "lon": 100.3633
+  },
+  {
+   "id": 19,
+   "name": "Kota Lubuk Linggau",
+   "provinceId": 8,
+   "province": "Sumatera Selatan",
+   "types": [
+    1
+   ],
+   "lat": -3.2914,
+   "lon": 102.8585
+  },
+  {
+   "id": 18,
+   "name": "Kota Palembang",
+   "provinceId": 8,
+   "province": "Sumatera Selatan",
+   "types": [
+    1,
+    2
+   ],
+   "lat": -2.9888,
+   "lon": 104.7569
+  },
+  {
+   "id": 455,
+   "name": "Kota Gunung Sitoli",
+   "provinceId": 2,
+   "province": "Sumatera Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 1.2885,
+   "lon": 97.6145,
+   "manual": true
+  },
+  {
+   "id": 4,
+   "name": "Kota Medan",
+   "provinceId": 2,
+   "province": "Sumatera Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 3.5895,
+   "lon": 98.6742
+  },
+  {
+   "id": 7,
+   "name": "Kota Padang Sidempuan",
+   "provinceId": 2,
+   "province": "Sumatera Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 1.3727,
+   "lon": 99.2727
+  },
+  {
+   "id": 6,
+   "name": "Kota Pematang Siantar",
+   "provinceId": 2,
+   "province": "Sumatera Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 2.9589,
+   "lon": 99.0654
+  },
+  {
+   "id": 5,
+   "name": "Kota Sibolga",
+   "provinceId": 2,
+   "province": "Sumatera Utara",
+   "types": [
+    1,
+    2
+   ],
+   "lat": 1.7403,
+   "lon": 98.7792,
+   "manual": true
+  }
+ ]
+}

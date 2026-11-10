@@ -1,0 +1,27 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+/backend-php/config.php
+
+# Dependencies, build output, and deployment metadata
+/node_modules/
+/dist/
+/coverage/
+/playwright-report/
+/test-results/
+/.vercel/
+/.vite/
+
+# PHP user uploads: keep only the safety rules and folder placeholder
+/backend-php/uploads/*
+!/backend-php/uploads/.htaccess
+!/backend-php/uploads/.gitkeep
+
+# OS and debug files
+.DS_Store
+Thumbs.db
+desktop.ini
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
