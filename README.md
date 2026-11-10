@@ -2,24 +2,53 @@
 
 **Pantau harga pangan dan perubahannya di berbagai wilayah Indonesia.** PANGAN PAS menyajikan informasi dari PIHPS Nasional Bank Indonesia dalam bentuk peta, grafik tren, pencarian wilayah sekitar, dan asisten tanya jawab.
 
+## Fitur
+
+- **Peta harga** — bandingkan harga komoditas antarwilayah.
+- **Tren harga** — lihat perubahan harga dalam beberapa periode.
+- **Cari di sekitar** — temukan informasi harga di wilayah terdekat yang dipantau.
+- **Favorit dan pantauan** — simpan wilayah pilihan dan ikuti perubahan harga.
+- **Komunitas** — berbagi temuan harga pangan.
+- **Asisten PANGAN PAS** — tanyakan informasi seputar harga pangan.
+
+## Unduh dan jalankan di Windows
+
+1. Buka halaman repo PANGAN PAS di GitHub.
+2. Klik **Code → Download ZIP**.
+3. Setelah ZIP selesai diunduh, klik kanan file ZIP lalu pilih **Extract All**. Hasil ekstraksi biasanya bernama `FinalOf-PANGAN-PAS-main` di folder Downloads.
+4. Pasang [Node.js versi LTS](https://nodejs.org/) jika belum ada. npm akan ikut terpasang.
+5. Buka PowerShell, lalu jalankan perintah berikut. Jika nama folder hasil ekstrak berbeda, sesuaikan nama folder pada perintah `cd`.
+
+```powershell
+cd "$env:USERPROFILE\Downloads\FinalOf-PANGAN-PAS-main"
+npm ci
+Copy-Item .env.example .env.local
+npm run dev
+```
+
+6. Buka alamat yang ditampilkan PowerShell, biasanya `http://127.0.0.1:5173/`.
+7. Untuk menghentikan aplikasi, kembali ke PowerShell lalu tekan **Ctrl+C**.
+
+Peta dan tren mengambil data saat terhubung ke internet. Fitur akun, komunitas online, dan layanan AI mungkin belum aktif pada salinan ZIP jika layanan servernya belum disiapkan.
+
 ## Cara menggunakan
 
-### 1. Bandingkan harga di peta
+### Bandingkan harga di peta
 Buka **Peta harga**, lalu pilih komoditas, wilayah, periode, dan jenis tempat belanja. Warna pada peta menunjukkan arah perubahan harga: hijau berarti turun, kuning stabil, merah naik, dan abu-abu berarti data belum tersedia.
 
-### 2. Lihat perubahan harga
-Buka **Tren** untuk memilih komoditas dan rentang waktu. Gunakan grafik untuk melihat perubahan dari waktu ke waktu; data yang tersedia juga bisa diunduh sebagai CSV.
+### Lihat perubahan harga
+Buka **Tren** untuk memilih komoditas dan rentang waktu. Gunakan grafik untuk melihat perubahan harga; data yang tersedia juga bisa diunduh sebagai CSV.
 
-### 3. Cari informasi di sekitar
-Buka **Sekitar** untuk mencari harga di kota atau kabupaten yang dipantau. Kamu bisa memilih wilayah secara manual atau menggunakan lokasi perangkat. Izin lokasi hanya diperlukan jika kamu memilih pencarian berdasarkan lokasimu.
+### Cari informasi di sekitar
+Buka **Sekitar** untuk mencari harga di kota atau kabupaten yang dipantau. Kamu bisa memilih wilayah secara manual atau menggunakan lokasi perangkat. Izin lokasi diperlukan hanya jika kamu memilih pencarian berdasarkan lokasimu.
 
-### 4. Simpan wilayah dan pantauan
+### Simpan wilayah dan pantauan
 Masuk ke akun untuk menyimpan provinsi favorit dan mengatur pantauan harga. Jika tersedia, notifikasi akan muncul saat data baru memenuhi aturan pantauanmu.
 
-### 5. Berbagi temuan di Komunitas
+### Berbagi temuan di Komunitas
 Masuk ke akun untuk mengirim temuan harga, foto bukti, komentar, atau balasan. Kiriman baru berstatus **belum diverifikasi** sampai diperiksa.
 
-### 6. Tanyakan sesuatu ke Asisten
+### Tanyakan sesuatu ke Asisten
 Gunakan **Tanya AI** untuk bertanya tentang harga yang sedang ditampilkan. Contoh:
 
 - “Di provinsi mana harga cabai merah paling rendah?”
@@ -31,5 +60,3 @@ Jawaban mengikuti data yang tersedia untuk wilayah, komoditas, dan periode terse
 ## Memahami data harga
 
 Harga bersumber dari [PIHPS Nasional Bank Indonesia](https://www.bi.go.id/hargapangan). Nilai yang ditampilkan merupakan **rata-rata pasar yang dipantau PIHPS**, bukan harga dari setiap toko. Ketersediaan data dapat berbeda menurut komoditas, wilayah, periode, dan jenis tempat belanja. Label **Data belum tersedia** berarti tidak ada angka yang ditampilkan untuk pilihan tersebut.
-
-Fitur akun, komunitas, pantauan, dan asisten dapat bergantung pada layanan yang diaktifkan pada situs tempat PANGAN PAS dibuka.
