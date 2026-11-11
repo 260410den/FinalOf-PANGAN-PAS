@@ -137,16 +137,22 @@ async function authEndpoint(req, url, res) {
     const exists = await rest('pengguna', `or=(username.eq.${encodeURIComponent(uname)},email.eq.${encodeURIComponent(email)})&select=id,username,email`);
     if (exists?.some(x => x.username === uname)) throw new ApiError(409, 'Username sudah dipakai.', 'username');
     if (exists?.some(x => x.email === email)) throw new ApiError(409, 'Email sudah terdaftar. Silakan masuk.', 'email');
-    const auth = await supa('/auth/v1/signup', { method: 'POST', body: { email, password, data: { nama, username: uname } } });
-    const authUser = auth.user || auth;
+    let authUser;
+    try {
+      authUser = await supa('/auth/v1/admin/users', {
+        method: 'POST',
+        service: true,
+        body: { email, password, email_confirm: true, user_metadata: { nama, username: uname } },
+      });
+    } catch (e) {
+      if (e.status === 409 || e.status === 422) throw new ApiError(409, 'Email sudah terdaftar. Silakan masuk atau gunakan email lain.', 'email');
+      throw e;
+    }
     const uid = authUser?.id;
     if (!uid) throw new ApiError(502, 'Supabase Auth tidak mengembalikan akun.');
-    if (!auth.access_token && Array.isArray(authUser.identities) && authUser.identities.length === 0) {
-      return json(res, 201, { ok: true, confirmationRequired: true, email });
-    }
     await saveProfile(uid, { nama, username: uname, email });
-    if (!auth.access_token) return json(res, 201, { ok: true, confirmationRequired: true, email });
-    return json(res, 201, { ok: true, user: await getPublic(uid) }, { 'Set-Cookie': cookieHeader(auth.access_token, auth.refresh_token) });
+    const session = await supa('/auth/v1/token?grant_type=password', { method: 'POST', body: { email, password } });
+    return json(res, 201, { ok: true, user: await getPublic(uid) }, { 'Set-Cookie': cookieHeader(session.access_token, session.refresh_token) });
   }
   if (action === 'login') {
     const identitas = String(input.identitas || '').trim().toLowerCase();
