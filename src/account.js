@@ -56,6 +56,7 @@ async function mergeLocalFavorites() {
 
 export async function register(form) {
   const data = await call('auth', { action: 'register', method: 'POST', body: form });
+  if (data.confirmationRequired) return data;
   setUser(data.user);
   await mergeLocalFavorites();
   return state.user;

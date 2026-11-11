@@ -34,9 +34,9 @@ Peta dan tren mengambil data saat terhubung ke internet. Fitur akun, komunitas o
 ## Deploy akun dan komunitas ke Vercel dengan Supabase
 
 1. Buat project di Supabase, lalu jalankan [`supabase/schema.sql`](supabase/schema.sql) melalui **SQL Editor**.
-2. Di Supabase **Authentication → Providers → Email**, matikan konfirmasi email agar pendaftaran langsung masuk seperti perilaku aplikasi saat ini.
-3. Salin URL project, anon/publishable key, dan service role/secret key dari **Project Settings → API**.
-4. Tambahkan `SUPABASE_URL`, `SUPABASE_ANON_KEY`, dan `SUPABASE_SERVICE_ROLE_KEY` ke Vercel → **Settings → Environment Variables**. Service role key hanya dipakai di fungsi server dan jangan pernah diberi awalan `VITE_`.
+2. Salin URL project, publishable key, dan secret key dari **Project Settings → API Keys**.
+3. Tambahkan `SUPABASE_URL`, `SUPABASE_ANON_KEY` (isi dengan publishable key), dan `SUPABASE_SERVICE_ROLE_KEY` (isi dengan secret key) ke Vercel → **Settings → Environment Variables**. Secret key hanya dipakai di fungsi server dan jangan pernah diberi awalan `VITE_`.
+4. Atur URL situs Supabase ke domain production Vercel agar tautan konfirmasi email kembali ke aplikasi. Dengan konfirmasi email aktif, pengguna perlu membuka tautan yang dikirim Supabase sebelum masuk. Jika konfirmasi email dimatikan, pendaftaran langsung masuk.
 5. Set `VITE_COMMUNITY_API_URL=server`, lalu deploy ulang. Untuk lokal, isi variabel yang sama di `.env.local` dan restart `npm run dev`.
 
 API akun, favorit, pantauan harga, komunitas, dan foto komunitas berjalan lewat Vercel Functions. Foto disimpan di bucket Supabase Storage `community` yang dibuat oleh SQL tersebut. Data akun lama di MySQL tidak otomatis dipindahkan; ekspor/impor data perlu dilakukan sebelum mematikan backend lama.

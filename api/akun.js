@@ -99,6 +99,7 @@ async function getPublic(uid) { return userView(await profileFor(uid)); }
 async function authEndpoint(req, url, res) {
   const action = url.searchParams.get('action') || 'me';
   if (req.method === 'GET' && action === 'me') {
+    config();
     const s = await session(req);
     return json(res, 200, { ok: true, user: s ? userView(s.profile) : null }, s?.refreshed ? { 'Set-Cookie': cookieHeader(s.access, s.refresh) } : {});
   }
@@ -120,8 +121,8 @@ async function authEndpoint(req, url, res) {
     const auth = await supa('/auth/v1/signup', { method: 'POST', body: { email, password, data: { nama, username: uname } } });
     const uid = auth.user?.id;
     if (!uid) throw new ApiError(502, 'Supabase Auth tidak mengembalikan akun.');
-    if (!auth.access_token) throw new ApiError(409, 'Matikan konfirmasi email di Supabase Auth agar akun langsung dapat masuk.');
     await saveProfile(uid, { nama, username: uname, email });
+    if (!auth.access_token) return json(res, 201, { ok: true, confirmationRequired: true, email });
     return json(res, 201, { ok: true, user: await getPublic(uid) }, { 'Set-Cookie': cookieHeader(auth.access_token, auth.refresh_token) });
   }
   if (action === 'login') {

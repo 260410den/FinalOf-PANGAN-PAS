@@ -59,7 +59,7 @@ function AuthCard({ title, sub, children, foot }) {
     {foot && <p className="auth-foot">{foot}</p>}
   </motion.section>;
 }
-const NotConfigured = () => <Alert tone="error">Server akun belum dikonfigurasi. Isi <code>ACCOUNT_API_ORIGIN</code> dan siapkan backend PHP + MySQL (lihat <code>backend-php/README.md</code>).</Alert>;
+const NotConfigured = () => <Alert tone="error">Server akun belum dikonfigurasi. Isi <code>SUPABASE_URL</code>, <code>SUPABASE_ANON_KEY</code>, dan <code>SUPABASE_SERVICE_ROLE_KEY</code> di Environment Variables Vercel.</Alert>;
 
 
 export function LoginPage() {
@@ -109,11 +109,12 @@ export function RegisterPage() {
   const [submitted, setSubmitted] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
   const [error, setError] = React.useState('');
+  const [notice, setNotice] = React.useState('');
   const [serverField, setServerField] = React.useState({});
   React.useEffect(() => { if (s.user) go(returnPath()); }, [s.user]);
   const all = validateRegister(f);
   const errs = { ...Object.fromEntries(Object.entries(all).filter(([k]) => submitted || blurred[k])), ...Object.fromEntries(Object.entries(serverField).filter(([, v]) => v)) };
-  const set = k => v => { setF(x => ({ ...x, [k]: k === 'username' ? cleanUsername(v) : v })); setServerField(x => ({ ...x, [k]: undefined })); setError(''); };
+  const set = k => v => { setF(x => ({ ...x, [k]: k === 'username' ? cleanUsername(v) : v })); setServerField(x => ({ ...x, [k]: undefined })); setError(''); setNotice(''); };
   const blur = k => () => setBlurred(b => ({ ...b, [k]: true }));
   const focusField = k => { const el = document.getElementById(`reg-${k}`); el?.scrollIntoView({ block: 'center', behavior: 'smooth' }); el?.focus({ preventScroll: true }); };
   const submit = async e => {
@@ -125,7 +126,14 @@ export function RegisterPage() {
       return;
     }
     setBusy(true);
-    try { await account.register({ ...f, nama: f.nama.trim(), email: f.email.trim() }); go(returnPath()); }
+    try {
+      const result = await account.register({ ...f, nama: f.nama.trim(), email: f.email.trim() });
+      if (result?.confirmationRequired) {
+        setNotice(`Akun dibuat. Buka tautan konfirmasi yang dikirim ke ${result.email}, lalu masuk.`);
+        return;
+      }
+      go(returnPath());
+    }
     catch (err) {
       if (err.field) { setServerField({ [err.field]: err.message }); setError(err.message); focusField(err.field); }
       else setError(err.message);
@@ -133,10 +141,11 @@ export function RegisterPage() {
     finally { setBusy(false); }
   };
   const pwChecks = [[f.password.length >= 8, 'Minimal 8 karakter'], [f.konfirmasi.length > 0 && f.konfirmasi === f.password, 'Konfirmasi sama']];
-  return <AuthCard title="Buat akun" sub="Langsung masuk setelah mendaftar — tanpa kode OTP."
+  return <AuthCard title="Buat akun" sub="Simpan lokasi favorit, pantauan harga, dan temuan komunitas."
     foot={<>Sudah punya akun? <a href={`/masuk${location.search}`}>Masuk</a></>}>
     {!s.configured && <NotConfigured />}
     {error && <Alert tone="error">{error}</Alert>}
+    {notice && <Alert>{notice}</Alert>}
     <form className="auth-form" onSubmit={submit} noValidate>
       <Field label="Nama lengkap" error={errs.nama}><input id="reg-nama" value={f.nama} onChange={e => set('nama')(e.target.value)} onBlur={blur('nama')} autoComplete="name" required maxLength={80} placeholder="Contoh: Siti Aminah" /></Field>
       <Field label="Username" error={errs.username} hint="Spasi otomatis jadi _, huruf otomatis kecil. Boleh huruf, angka, titik, - dan _."><input id="reg-username" value={f.username} onChange={e => set('username')(e.target.value)} onBlur={blur('username')} autoComplete="username" autoCapitalize="none" spellCheck="false" required maxLength={30} placeholder="contoh: siti_aminah" /></Field>
