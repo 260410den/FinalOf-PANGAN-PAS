@@ -39,6 +39,8 @@ Peta dan tren mengambil data saat terhubung ke internet. Fitur akun, komunitas o
 4. Atur URL situs Supabase ke domain production Vercel agar tautan konfirmasi email kembali ke aplikasi. Dengan konfirmasi email aktif, pengguna perlu membuka tautan yang dikirim Supabase sebelum masuk. Jika konfirmasi email dimatikan, pendaftaran langsung masuk.
 5. Set `VITE_COMMUNITY_API_URL=server`, lalu deploy ulang. Untuk lokal, isi variabel yang sama di `.env.local` dan restart `npm run dev`.
 
+Jika pendaftaran sebelumnya menampilkan error setelah email dikirim, buka tautan konfirmasi di email itu lalu masuk sekali dengan alamat email. Profil akun yang belum sempat tersimpan akan dipulihkan saat login pertama.
+
 API akun, favorit, pantauan harga, komunitas, dan foto komunitas berjalan lewat Vercel Functions. Foto disimpan di bucket Supabase Storage `community` yang dibuat oleh SQL tersebut. Data akun lama di MySQL tidak otomatis dipindahkan; ekspor/impor data perlu dilakukan sebelum mematikan backend lama.
 
 ## Cara menggunakan

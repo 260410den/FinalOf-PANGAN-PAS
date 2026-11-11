@@ -95,6 +95,25 @@ async function saveProfile(uid, values) {
   return result?.[0];
 }
 async function getPublic(uid) { return userView(await profileFor(uid)); }
+async function getOrCreatePublic(authUser) {
+  if (!authUser?.id || !authUser.email) throw new ApiError(502, 'Supabase Auth tidak mengembalikan akun.');
+  try { return await getPublic(authUser.id); }
+  catch (e) { if (e.status !== 401) throw e; }
+
+  const email = String(authUser.email).trim().toLowerCase();
+  const metadata = authUser.user_metadata || {};
+  const candidate = String(metadata.username || email.split('@')[0]).toLowerCase()
+    .replace(/\s+/g, '_').replace(/[^a-z0-9_.-]/g, '').replace(/^\.+|\.+$/g, '').slice(0, 30);
+  let uname;
+  try { uname = username(candidate); }
+  catch { uname = username(`u${String(authUser.id).replace(/-/g, '').slice(0, 12)}`); }
+  const conflicts = await rest('pengguna', `or=(username.eq.${encodeURIComponent(uname)},email.eq.${encodeURIComponent(email)})&select=auth_uid`);
+  if (conflicts?.some(row => row.auth_uid !== authUser.id)) throw new ApiError(409, 'Profil akun ini perlu diperiksa sebelum dipulihkan.');
+  const rawName = String(metadata.nama || email.split('@')[0] || 'Pengguna').replace(/[\x00-\x1f\x7f]/g, '').trim().slice(0, 80);
+  const nama = rawName.length >= 2 ? rawName : 'Pengguna';
+  await saveProfile(authUser.id, { nama, username: uname, email });
+  return getPublic(authUser.id);
+}
 
 async function authEndpoint(req, url, res) {
   const action = url.searchParams.get('action') || 'me';
@@ -119,8 +138,12 @@ async function authEndpoint(req, url, res) {
     if (exists?.some(x => x.username === uname)) throw new ApiError(409, 'Username sudah dipakai.', 'username');
     if (exists?.some(x => x.email === email)) throw new ApiError(409, 'Email sudah terdaftar. Silakan masuk.', 'email');
     const auth = await supa('/auth/v1/signup', { method: 'POST', body: { email, password, data: { nama, username: uname } } });
-    const uid = auth.user?.id;
+    const authUser = auth.user || auth;
+    const uid = authUser?.id;
     if (!uid) throw new ApiError(502, 'Supabase Auth tidak mengembalikan akun.');
+    if (!auth.access_token && Array.isArray(authUser.identities) && authUser.identities.length === 0) {
+      return json(res, 201, { ok: true, confirmationRequired: true, email });
+    }
     await saveProfile(uid, { nama, username: uname, email });
     if (!auth.access_token) return json(res, 201, { ok: true, confirmationRequired: true, email });
     return json(res, 201, { ok: true, user: await getPublic(uid) }, { 'Set-Cookie': cookieHeader(auth.access_token, auth.refresh_token) });
@@ -130,7 +153,7 @@ async function authEndpoint(req, url, res) {
     const email = identitas.includes('@') ? identitas : (await rest('pengguna', `username=eq.${encodeURIComponent(identitas)}&select=email`))?.[0]?.email;
     if (!email) throw new ApiError(401, 'Username/email atau password salah.');
     const auth = await supa('/auth/v1/token?grant_type=password', { method: 'POST', body: { email, password: String(input.password || '') } });
-    return json(res, 200, { ok: true, user: await getPublic(auth.user.id) }, { 'Set-Cookie': cookieHeader(auth.access_token, auth.refresh_token) });
+    return json(res, 200, { ok: true, user: await getOrCreatePublic(auth.user) }, { 'Set-Cookie': cookieHeader(auth.access_token, auth.refresh_token) });
   }
   throw new ApiError(400, 'Aksi tidak dikenal.');
 }
