@@ -46,7 +46,7 @@ function localServerApis() {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  for (const k of ['ACCOUNT_API_ORIGIN', 'ACCOUNT_PROXY_SECRET', 'NVIDIA_API_KEY', 'NVIDIA_MODEL', 'NVIDIA_BASE_URL']) if (env[k] && !process.env[k]) process.env[k] = env[k];
+  for (const k of ['SUPABASE_URL', 'SUPABASE_ANON_KEY', 'SUPABASE_SERVICE_ROLE_KEY', 'NVIDIA_API_KEY', 'NVIDIA_MODEL', 'NVIDIA_BASE_URL']) if (env[k] && !process.env[k]) process.env[k] = env[k];
   return {
     plugins: [tailwindcss(), localPriceApi(), localServerApis()],
 

@@ -31,6 +31,16 @@ npm run dev
 
 Peta dan tren mengambil data saat terhubung ke internet. Fitur akun, komunitas online, dan layanan AI mungkin belum aktif pada salinan ZIP jika layanan servernya belum disiapkan.
 
+## Deploy akun dan komunitas ke Vercel dengan Supabase
+
+1. Buat project di Supabase, lalu jalankan [`supabase/schema.sql`](supabase/schema.sql) melalui **SQL Editor**.
+2. Di Supabase **Authentication → Providers → Email**, matikan konfirmasi email agar pendaftaran langsung masuk seperti perilaku aplikasi saat ini.
+3. Salin URL project, anon/publishable key, dan service role/secret key dari **Project Settings → API**.
+4. Tambahkan `SUPABASE_URL`, `SUPABASE_ANON_KEY`, dan `SUPABASE_SERVICE_ROLE_KEY` ke Vercel → **Settings → Environment Variables**. Service role key hanya dipakai di fungsi server dan jangan pernah diberi awalan `VITE_`.
+5. Set `VITE_COMMUNITY_API_URL=server`, lalu deploy ulang. Untuk lokal, isi variabel yang sama di `.env.local` dan restart `npm run dev`.
+
+API akun, favorit, pantauan harga, komunitas, dan foto komunitas berjalan lewat Vercel Functions. Foto disimpan di bucket Supabase Storage `community` yang dibuat oleh SQL tersebut. Data akun lama di MySQL tidak otomatis dipindahkan; ekspor/impor data perlu dilakukan sebelum mematikan backend lama.
+
 ## Cara menggunakan
 
 ### Bandingkan harga di peta
